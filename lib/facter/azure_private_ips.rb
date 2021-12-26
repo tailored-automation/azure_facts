@@ -7,7 +7,7 @@ Facter.add(:azure_private_ips) do
     metadata.dig('network', 'interface').to_a.each do |interface|
       interface.dig('ipv4', 'ipAddress').to_a.each do |ipaddress|
         ip = ipaddress['privateIpAddress']
-        ips << ip unless ip.nil? 
+        ips << ip unless ip.nil?
       end
     end
     ips
