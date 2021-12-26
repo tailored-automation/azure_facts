@@ -1,0 +1,61 @@
+{
+  "name": "tailoredautomation-azure_facts",
+  "version": "0.1.0",
+  "author": "tailoredautomation",
+  "summary": "Azure Facts",
+  "license": "Apache-2.0",
+  "source": "https://github.com/tailored-automation/puppet-module-azure_facts",
+  "project_page": "https://github.com/tailored-automation/puppet-module-azure_facts",
+  "issues_url": "https://github.com/tailored-automation/puppet-module-azure_facts/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7",
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Rocky",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9",
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04",
+        "20.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 6.0.0 < 8.0.0"
+    }
+  ],
+  "pdk-version": "2.2.0",
+  "template-url": "https://github.com/tailored-automation/pdk-templates.git#master",
+  "template-ref": "heads/master-0-g4b7397a"
+}
