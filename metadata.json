@@ -7,6 +7,7 @@
   "source": "https://github.com/tailored-automation/puppet-module-azure_facts",
   "project_page": "https://github.com/tailored-automation/puppet-module-azure_facts",
   "issues_url": "https://github.com/tailored-automation/puppet-module-azure_facts/issues",
+  "dependencies": [],
   "operatingsystem_support": [
     {
       "operatingsystem": "CentOS",
