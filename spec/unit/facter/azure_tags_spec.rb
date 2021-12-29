@@ -1,24 +1,18 @@
 require 'spec_helper'
-require 'facter/util/azure_facts'
 require 'facter/azure_tags'
 
 describe 'azure_tags' do
-  let(:response) do
-    Net::HTTPSuccess.new(1.0, '200', 'OK')
+  before(:each) do
+    allow(Facter).to receive(:value).with('cloud.provider').and_return('azure')
   end
-  let(:http) { instance_double(Net::HTTP) }
 
   it 'returns tags' do
-    allow(Net::HTTP).to receive(:new).and_return(http)
-    allow(http).to receive(:request) { response }
-    allow(response).to receive(:body).and_return(my_fixture_read('metadata1.json'))
-    expect(Facter.value(:azure_tags).fetch('role')).to eq('puppet')
+    allow(Facter).to receive(:value).with(:az_metadata).and_return(JSON.parse(my_fixture_read('metadata1.json')))
+    expect(Facter.fact(:azure_tags).value.fetch('role')).to eq('puppet')
   end
 
   it 'returns nothing' do
-    allow(Net::HTTP).to receive(:new).and_return(http)
-    allow(http).to receive(:request) { response }
-    allow(response).to receive(:body).and_return('')
-    expect(Facter.value(:azure_tags)).to eq({})
+    allow(Facter).to receive(:value).with(:az_metadata).and_return(nil)
+    expect(Facter.fact(:azure_tags).value).to eq({})
   end
 end
