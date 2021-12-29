@@ -1,13 +1,15 @@
 {
   "name": "tailoredautomation-azure_facts",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "tailoredautomation",
   "summary": "Azure Facts",
   "license": "Apache-2.0",
   "source": "https://github.com/tailored-automation/puppet-module-azure_facts",
   "project_page": "https://github.com/tailored-automation/puppet-module-azure_facts",
   "issues_url": "https://github.com/tailored-automation/puppet-module-azure_facts/issues",
-  "dependencies": [],
+  "dependencies": [
+
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "CentOS",
