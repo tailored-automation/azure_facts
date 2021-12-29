@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="nav_wrap">
-      <iframe id="nav" src="class_list.html?1"></iframe>
+      <iframe id="nav" src="file_list.html?1"></iframe>
       <div id="resizer"></div>
     </div>
 
@@ -43,8 +43,8 @@
 
         <div id="search">
   
-    <a class="full_list_link" id="class_list_link"
-        href="class_list.html">
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
 
         <svg width="24" height="24">
           <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
@@ -73,9 +73,7 @@
 
 <h2 id="label-Description">Description</h2>
 
-<p>This module provides custom facts for Azure VMs that are pulled from the <a
-href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/instance-metadata-service?tabs=linux">Azure
-Metadata Service</a></p>
+<p>This module provides custom facts for Azure VMs that are pulled from the <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/instance-metadata-service?tabs=linux">Azure Metadata Service</a> via the Facter <code>az_metadata</code> fact.</p>
 
 <h2 id="label-Reference">Reference</h2>
 
@@ -85,13 +83,11 @@ Metadata Service</a></p>
 
 <h3 id="label-azure_private_ips"><code>azure_private_ips</code></h3>
 
-<p>An Array of private IPs for the VM, Example:
-<code>[&#39;10.20.1.1&#39;]</code></p>
+<p>An Array of private IPs for the VM, Example: <code>[&#39;10.20.1.1&#39;]</code></p>
 
 <h3 id="label-azure_tags"><code>azure_tags</code></h3>
 
-<p>The tags associated to the VM, Example: <code>{&#39;role&#39; =&gt;
-&#39;puppet&#39;, &#39;environment&#39; =&gt; &#39;production&#39;}</code></p>
+<p>The tags associated to the VM, Example: <code>{&#39;role&#39; =&gt; &#39;puppet&#39;, &#39;environment&#39; =&gt; &#39;production&#39;}</code></p>
 
 <h3 id="label-Limitations">Limitations</h3>
 
