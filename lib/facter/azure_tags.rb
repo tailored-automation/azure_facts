@@ -1,12 +1,12 @@
-require 'facter/util/azure_facts'
-
 Facter.add(:azure_tags) do
   setcode do
-    metadata = Facter::Util::AzureFacts.metadata
-    tags = {}
-    metadata.dig('compute', 'tagsList').to_a.each do |tag|
-      tags[tag['name']] = tag['value']
+    if Facter.value('cloud.provider') == 'azure'
+      metadata = Facter.value(:az_metadata).to_h
+      tags = {}
+      metadata.dig('compute', 'tagsList').to_a.each do |tag|
+        tags[tag['name']] = tag['value']
+      end
+      tags
     end
-    tags
   end
 end

@@ -10,7 +10,7 @@ Azure custom facts
 
 ## Description
 
-This module provides custom facts for Azure VMs that are pulled from the [Azure Metadata Service](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/instance-metadata-service?tabs=linux)
+This module provides custom facts for Azure VMs that are pulled from the [Azure Metadata Service](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/instance-metadata-service?tabs=linux) via the Facter `az_metadata` fact.
 
 ## Reference
 
